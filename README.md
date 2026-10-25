@@ -1,26 +1,28 @@
 # Using Vite and React in Application Development 
 
 ## 1 Install Node.js
-To begin with, we need to make sure our device has the Node.js environment installed to gain access to features like vite, langauges liked JavaScript and React, and be able to run the code. 
+To begin with, we need to make sure our device has the Node.js environment installed to gain access to features like vite, and langauges liked JavaScript and React.
 
-This can be done by installing Node.js officially from the following link:
-[Install Node.js](]https://nodejs.org/en/download)
+We can install Node.js officially from the following link:
+[Install Node.js](https://nodejs.org/en/download)
 
-## Install Git
-Install git to be able to rrun git commands on your device. You can even use the special git terminal Git Bash. 
+## 2 Install Git
+Then, we need to install git on our device to be able to run git commands on our device. You can even use the specific git terminal called Git Bash. 
 
 Official download link:
 [Download Git](https://git-scm.com/install/windows)
 
-## 2 Cloning the repository
+## 3 Cloning the repository
+Create a version of the repository on your device to edit and use.
 
-### Git Bash, Command Prompt (CMD), and PowerShell (PS)
 #### Go to the folder you want to clone the repository in:
 
-Git Bash:
+With Git Bash:
+
 ```cd /c/Users/YourName/Documents```
 
-CMD and PS:
+With CMD and PS:
+
 ```cd C:\Users\YourName\Documents```
 
 #### Clone the repository:
@@ -31,17 +33,18 @@ CMD and PS:
 
 ```cd react-app```
 
-## Install npm locally and run the app
+## 4 Accessing and editing the site
 On your terminal, go to the folder you just cloned:
 
-Git Bash:
+With Git Bash:
 
 ```cd /c/Users/YourName/Documents/react-app```
 
-CMD and PS:
+With CMD and PS:
+
 ```cd C:\Users\YourName\Documents\react-app``` 
 
-Inside that folder, run npm install:
+Inside the folder, run npm install:
 
 ```npm install```
 
