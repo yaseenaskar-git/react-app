@@ -1,20 +1,52 @@
-<<<<<<< HEAD
-# React + Vite
+# Using Vite and React in Application Development 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1 Install Node.js
+To begin with, we need to make sure our device has the Node.js environment installed to gain access to features like vite, langauges liked JavaScript and React, and be able to run the code. 
 
-Currently, two official plugins are available:
+This can be done by installing Node.js officially from the following link:
+[Install Node.js](]https://nodejs.org/en/download)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Install Git
+Install git to be able to rrun git commands on your device. You can even use the special git terminal Git Bash. 
 
-## React Compiler
+Official download link:
+[Download Git](https://git-scm.com/install/windows)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 2 Cloning the repository
 
-## Expanding the ESLint configuration
+### Git Bash, Command Prompt (CMD), and PowerShell (PS)
+#### Go to the folder you want to clone the repository in:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# reeact-app
->>>>>>> c9355c7bc7547d62be04c7177cf449a9bf884515
+Git Bash:
+```cd /c/Users/YourName/Documents```
+
+CMD and PS:
+```cd C:\Users\YourName\Documents```
+
+#### Clone the repository:
+
+```git clone https://github.com/yaseenaskar-git/react-app.git``` 
+
+#### Enter the repository:
+
+```cd react-app```
+
+## Install npm locally and run the app
+On your terminal, go to the folder you just cloned:
+
+Git Bash:
+
+```cd /c/Users/YourName/Documents/react-app```
+
+CMD and PS:
+```cd C:\Users\YourName\Documents\react-app``` 
+
+Inside that folder, run npm install:
+
+```npm install```
+
+Then inside the folder, run the app:
+
+```npm run dev``` 
+
+Then copy the port link in your terminal and paste it in a browser to access the website and start editing it. 
