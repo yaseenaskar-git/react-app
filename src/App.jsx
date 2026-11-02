@@ -1,9 +1,9 @@
 import { useState } from "react";
 import services from "./services";
 import "./App.css";
-import Header from "./components/Header";
+import Header from "./components/header";
 import ServiceList from "./components/serviceList";
-import Footer from "./components/Footer";
+import Footer from "./components/footer";
 
 function App() {
   const [selectedServices, setSelectedServices] = useState([]);
@@ -18,18 +18,8 @@ function App() {
 
     return (
         <div className="website">
-
-            <header>
-                
+   
               <Header />
-
-              <div className="description">
-                  We help athletes achieve their performance goals
-                  by developing both their physical abilities and
-                  mental strength.
-              </div>
-
-            </header>
 
             <main>
 

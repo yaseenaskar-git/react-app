@@ -102,3 +102,15 @@
   padding: 20px;
   margin-top: 30px;
 }
+
+.selection-summary {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #172554;
+  background: #e0e7ff;
+  padding: 15px;
+  margin: 25px auto;
+  max-width: 400px;
+  border-radius: 8px;
+}
