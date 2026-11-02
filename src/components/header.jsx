@@ -1,9 +1,11 @@
 
 function Header() {
     return (
-        <header>
+        <header className="hero">
             <h1>DontJustTrain</h1>
-            <p>Shaping characters, not just athletes!</p>
+            <p className="tagline">
+                Shaping characters, not just athletes!
+            </p>
         </header>
     );
 }

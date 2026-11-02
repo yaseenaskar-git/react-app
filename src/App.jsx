@@ -1,56 +1,56 @@
+import { useState } from "react";
 import services from "./services";
 import "./App.css";
+import Header from "./components/Header";
+import ServiceList from "./components/serviceList";
+import Footer from "./components/Footer";
 
 function App() {
-  return (
-    <div className="website">
-      <header className="hero">
-        <h1>DontJustTrain</h1>
+  const [selectedServices, setSelectedServices] = useState([]);
 
-        <p className="tagline">
-          Shaping characters, not just athletes!
-        </p>
+  function handleServiceSelect(serviceName) {
+    setSelectedServices((previousSelected) =>
+        previousSelected.includes(serviceName)
+            ? previousSelected.filter((name) => name !== serviceName)
+            : [...previousSelected, serviceName]
+    );
+}
 
-        <p className="description">
-          We help athletes achieve their performance goals
-          by developing both their physical abilities and
-          mental strength.
-        </p>
-      </header>
+    return (
+        <div className="website">
 
-      <main>
-        <section className="services-section">
-          <h2>Our Training Programs</h2>
+            <header>
+                
+              <Header />
 
-          <p className="section-description">
-            Explore our programs designed to help athletes
-            improve their performance.
-          </p>
+              <div className="description">
+                  We help athletes achieve their performance goals
+                  by developing both their physical abilities and
+                  mental strength.
+              </div>
 
-          <div className="services-container">
-            {services.map((service) => (
-              <article className="service-card" key={service.name}>
-                <h3>{service.name}</h3>
-                <p className="description">
-                  {service.description}
-                </p>
+            </header>
 
-                <p className="price">
-                  ${service.price}
-                  <span>/month</span>
-                </p>
+            <main>
 
-              </article>
-            ))}
-          </div>
-        </section>
-      </main>
+              <p className="selection-summary">
+              You have selected {selectedServices.length} services.
+              </p>
 
-      <footer className="footer">
-        <p>&copy; 2026 DontJustTrain. All rights reserved.</p>
-      </footer>
-    </div>
-  );
+              <ServiceList
+              services={services}
+              selectedServices={selectedServices}
+              onServiceSelect={handleServiceSelect}
+              />
+
+            </main>
+
+            <footer className="footer">
+                <Footer />
+            </footer>
+
+        </div>
+    );
 }
 
 export default App;
