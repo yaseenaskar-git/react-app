@@ -61,3 +61,23 @@ Then copy the port link in your terminal and paste it in a browser to access the
 | / | Home | Displays the DontJustTrain introduction. |
 | /services | Services | Displays all available athletic training services. |
 | /services/:id | Service Details | Displays information about a specific service based on its ID. |
+
+# Route Testing
+
+The following tests were performed to verify the React Router implementation.
+
+| Test | Description | Expected Result | Actual Result |
+|---|---|---|---|
+| Home Route | Navigate to `/` | Home page displays | Pass |
+| Items Route | Navigate to `/items` | Training programs display | Pass |
+| Dynamic Route 1 | Navigate to `/items/1` | Strength and Conditioning details display | Pass |
+| Dynamic Route 2 | Navigate to `/items/2` | Nutrition Coaching details display | Pass |
+| Dynamic Route 3 | Navigate to `/items/3` | Mental Training details display | Pass |
+| Internal Navigation | Click navigation links | Correct page loads without full page reload | Pass |
+| Browser Back | Navigate between pages and click Back | Previous page displays | Pass |
+| Page Refresh | Refresh a routed page | Current page remains accessible | Pass |
+| Invalid ID | Navigate to `/items/99` | Service Not Found message displays | Pass |
+
+## Testing Summary
+
+All routing tests were successful. The application correctly handles navigation between pages, dynamic route parameters, browser history, page refreshing, and invalid service identifiers.

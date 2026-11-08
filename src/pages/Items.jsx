@@ -21,13 +21,13 @@ function Items({ services, selectedServices, onServiceSelect }) {
             <div>
                 <h3>Explore Individual Programs</h3>
 
-                <Link to="/items/1">Strength and Conditioning</Link>
-                <br />
-
-                <Link to="/items/2">Nutrition Coaching</Link>
-                <br />
-
-                <Link to="/items/3">Mental Training</Link>
+                {services.slice(0, 3).map((service) => (
+                    <div key={service.id}>
+                        <Link to={`/items/${service.id}`}>
+                            {service.name}
+                        </Link>
+                    </div>
+                ))}
             </div>
         </main>
     );
