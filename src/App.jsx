@@ -27,23 +27,21 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/items" element={<Items />} />
+                
+                <Route
+                    path="/items"
+                    element={
+                        <Items
+                            services={services}
+                            selectedServices={selectedServices}
+                            onServiceSelect={handleServiceSelect}
+                        />
+                    }
+                />
+
+
                 <Route path="/items/:id" element={<ItemDetails />} />
             </Routes>
-
-            <main>
-
-              <p className="selection-summary">
-              You have selected {selectedServices.length} services.
-              </p>
-
-              <ServiceList
-              services={services}
-              selectedServices={selectedServices}
-              onServiceSelect={handleServiceSelect}
-              />
-
-            </main>
 
             <footer className="footer">
                 <Footer />
