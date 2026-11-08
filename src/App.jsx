@@ -4,6 +4,10 @@ import "./App.css";
 import Header from "./components/header";
 import ServiceList from "./components/serviceList";
 import Footer from "./components/footer";
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Items from './pages/Items';
+import ItemDetails from './pages/ItemDetails';
 
 function App() {
   const [selectedServices, setSelectedServices] = useState([]);
@@ -19,7 +23,13 @@ function App() {
     return (
         <div className="website">
    
-              <Header />
+            <Header />
+
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/items" element={<Items />} />
+                <Route path="/items/:id" element={<ItemDetails />} />
+            </Routes>
 
             <main>
 
