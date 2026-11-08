@@ -1,10 +1,9 @@
 function Home() {
     return (
-        <main>
+        <main className="page-content">
             <h2>Welcome to DontJustTrain!</h2>
             <p>
-                We help athletes achieve their performance goals
-                by developing both their physical and mental abilities.
+                Home page! More will be added soon!
             </p>
         </main>
     );

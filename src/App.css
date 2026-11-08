@@ -114,3 +114,12 @@
   max-width: 400px;
   border-radius: 8px;
 }
+
+/* Routed pages */
+.page-content {
+  background: white;
+  color: #1f2937;
+  text-align: center;
+  padding: 70px 20px;
+  min-height: 400px;
+}

@@ -2,7 +2,7 @@ import ServiceList from "../components/serviceList";
 
 function Items({ services, selectedServices, onServiceSelect }) {
     return (
-        <main>
+        <main className="page-content">
             <h2>Our Training Programs</h2>
 
             <p>Explore our available athletic training programs.</p>

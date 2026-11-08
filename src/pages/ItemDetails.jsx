@@ -1,6 +1,6 @@
 function ItemDetails() {
     return (
-        <main>
+        <main className="page-content">
             <h2>Training Program Details</h2>
             <p>More information about the selected program will appear here.</p>
         </main>
