@@ -27,7 +27,7 @@ function Items({ services, selectedServices, onServiceSelect }) {
                 <Link to="/items/2">Nutrition Coaching</Link>
                 <br />
 
-                <Link to="/items/3">Combined Training Package</Link>
+                <Link to="/items/3">Mental Training</Link>
             </div>
         </main>
     );
