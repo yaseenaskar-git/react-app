@@ -53,3 +53,11 @@ Then inside the folder, run the app:
 ```npm run dev``` 
 
 Then copy the port link in your terminal and paste it in a browser to access the website and start editing it. 
+
+# Routing Plan
+
+| URL | View | Description |
+|---|---|---|
+| / | Home | Displays the DontJustTrain introduction. |
+| /services | Services | Displays all available athletic training services. |
+| /services/:id | Service Details | Displays information about a specific service based on its ID. |
