@@ -1,4 +1,5 @@
 import ServiceList from "../components/serviceList";
+import { Link } from "react-router-dom";
 
 function Items({ services, selectedServices, onServiceSelect }) {
     return (
@@ -16,6 +17,18 @@ function Items({ services, selectedServices, onServiceSelect }) {
                 selectedServices={selectedServices}
                 onServiceSelect={onServiceSelect}
             />
+
+            <div>
+                <h3>Explore Individual Programs</h3>
+
+                <Link to="/items/1">Strength and Conditioning</Link>
+                <br />
+
+                <Link to="/items/2">Nutrition Coaching</Link>
+                <br />
+
+                <Link to="/items/3">Combined Training Package</Link>
+            </div>
         </main>
     );
 }
