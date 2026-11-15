@@ -8,6 +8,9 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Items from './pages/Items';
 import ItemDetails from './pages/ItemDetails';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   const [selectedServices, setSelectedServices] = useState([]);
@@ -27,7 +30,7 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<Home />} />
-                
+                <Route path="/login" element={<Login />} />
                 <Route
                     path="/items"
                     element={
@@ -38,6 +41,15 @@ function App() {
                         />
                     }
                 />
+
+                <Route
+                    path="/dashboard"
+                    element={
+                        <ProtectedRoute>
+                            <Dashboard />
+                        </ProtectedRoute>
+                    }
+/>
 
 
                 <Route path="/items/:id" element={<ItemDetails />} />
