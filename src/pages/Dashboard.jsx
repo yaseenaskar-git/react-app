@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
     const { user, token, logout } = useAuth();
@@ -7,6 +8,8 @@ function Dashboard() {
     const [protectedData, setProtectedData] = useState(null);
     const [error, setError] = useState("");
     const [adminMessage, setAdminMessage] = useState("");
+    const navigate = useNavigate();
+
     useEffect(() => {
         async function fetchProtectedData() {
             try {
@@ -20,6 +23,12 @@ function Dashboard() {
                 );
 
                 const data = await response.json();
+
+                if (response.status === 401) {
+                    logout();
+                    navigate("/login");
+                    return;
+                }
 
                 if (!response.ok) {
                     throw new Error(data.message || "Unable to access protected information.");
