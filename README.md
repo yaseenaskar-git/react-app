@@ -1,68 +1,80 @@
-# Using Vite and React in Application Development 
+# Using Vite and React in Application Development
 
-## 1 Install Node.js
-To begin with, we need to make sure our device has the Node.js environment installed to gain access to features like vite, and langauges liked JavaScript and React.
+## 1. Install Node.js
 
-We can install Node.js officially from the following link:
-[Install Node.js](https://nodejs.org/en/download)
-
-## 2 Install Git
-Then, we need to install git on our device to be able to run git commands on our device. You can even use the specific git terminal called Git Bash. 
+To begin, make sure your device has the Node.js environment installed. This provides access to tools such as Vite and allows us to work with JavaScript and React.
 
 Official download link:
+
+[Install Node.js](https://nodejs.org/en/download)
+
+## 2. Install Git
+
+Install Git on your device to run Git commands. You can also use the Git Bash terminal.
+
+Official download link:
+
 [Download Git](https://git-scm.com/install/windows)
 
-## 3 Cloning the repository
-Create a version of the repository on your device to edit and use.
+## 3. Cloning the Repository
 
-#### Go to the folder you want to clone the repository in:
+Create a local copy of the repository on your device.
 
-With Git Bash:
-
-```cd /c/Users/YourName/Documents```
-
-With CMD and PS:
-
-```cd C:\Users\YourName\Documents```
-
-#### Clone the repository:
-
-```git clone https://github.com/yaseenaskar-git/react-app.git``` 
-
-#### Enter the repository:
-
-```cd react-app```
-
-## 4 Accessing and editing the site
-On your terminal, go to the folder you just cloned:
+**Go to the folder where you want to clone the repository:**
 
 With Git Bash:
 
-```cd /c/Users/YourName/Documents/react-app```
+```bash
+cd /c/Users/YourName/Documents
+```
 
-With CMD and PS:
+With CMD and PowerShell:
 
-```cd C:\Users\YourName\Documents\react-app``` 
+```powershell
+cd C:\Users\YourName\Documents
+```
 
-Inside the folder, run npm install:
+**Clone the repository:**
 
-```npm install```
+```bash
+git clone https://github.com/yaseenaskar-git/react-app.git
+```
 
-Then inside the folder, run the app:
+**Enter the repository:**
 
-```npm run dev``` 
+```bash
+cd react-app
+```
 
-Then copy the port link in your terminal and paste it in a browser to access the website and start editing it. 
+## 4. Accessing and Editing the Site
 
-# Routing Plan
+Inside the folder, run:
+
+```bash
+npm install
+```
+
+Then start the application:
+
+```bash
+npm run dev
+```
+
+Copy the local development URL displayed in your terminal and paste it into a browser to access the website.
+
+## 5. Routing Plan
+
+The application uses React Router to navigate between different pages without requiring a full page reload.
 
 | URL | View | Description |
 |---|---|---|
-| / | Home | Displays the DontJustTrain introduction. |
-| /services | Services | Displays all available athletic training services. |
-| /services/:id | Service Details | Displays information about a specific service based on its ID. |
+| `/` | Home | Displays the DontJustTrain introduction. |
+| `/items` | Items | Displays all available athletic training services. |
+| `/items/:id` | Item Details | Displays information about a specific service based on its ID. |
+| `/login` | Login | Allows users to authenticate using their email and password. |
+| `/dashboard` | Dashboard | Displays authenticated user information and protected backend resources. |
 
-# Route Testing
+## 6. Route Testing
 
 The following tests were performed to verify the React Router implementation.
 
@@ -78,6 +90,19 @@ The following tests were performed to verify the React Router implementation.
 | Page Refresh | Refresh a routed page | Current page remains accessible | Pass |
 | Invalid ID | Navigate to `/items/99` | Service Not Found message displays | Pass |
 
-## Testing Summary
+## 7. Authentication and Backend Integration
 
-All routing tests were successful. The application correctly handles navigation between pages, dynamic route parameters, browser history, page refreshing, and invalid service identifiers.
+The frontend communicates with a separate Node.js and Express backend to authenticate users and retrieve protected information.
+
+### Login Interface
+
+Users can access the login page through:
+
+`/login`
+
+The login interface includes:
+- Email and password input fields.
+- Input validation to prevent missing credentials.
+- Error messages for unsuccessful authentication.
+
+Upon successful login, the backend returns a JSON Web
